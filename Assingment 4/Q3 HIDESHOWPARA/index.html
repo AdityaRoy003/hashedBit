@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Paragraph Visibility</title>
+    <style>
+        #useless-paragraph {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggle-button" onclick="toggleParagraph()">Show/Hide Paragraph</button>
+    <p id="useless-paragraph" style="display: none;">This is a useless paragraph that can be hidden or shown based on user preference.</p>
+
+    <script>
+        function toggleParagraph() {
+            const paragraph = document.getElementById('useless-paragraph');
+            if (paragraph.style.display === 'none') {
+                paragraph.style.display = 'block'; // Show the paragraph
+            } else {
+                paragraph.style.display = 'none'; // Hide the paragraph
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Div Example</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        function createDiv(width, height, text) {
+            const newDiv = document.createElement('div');
+            newDiv.style.width = width + 'px';
+            newDiv.style.height = height + 'px';
+            newDiv.textContent = text;
+            newDiv.style.border = '1px solid black';
+            newDiv.style.margin = '10px';
+            newDiv.style.display = 'flex';
+            newDiv.style.alignItems = 'center';
+            newDiv.style.justifyContent = 'center';
+            const container = document.getElementById('container');
+            container.appendChild(newDiv);
+        }
+
+        // Example usage
+        createDiv(200, 100, 'Hello, I am a new div!');
+        createDiv(300, 150, 'Another div here!');
+    </script>
+</body>
+</html>
